@@ -8,9 +8,9 @@ class Card {
 
   show(){
     fill(255)
-    rect(this.x, this.y, width/10, height/8)
+    rect(this.x, this.y, 40, 60)
     fill(0)
-    textSize(30)
+    textSize(24)
     text(this.type, this.x, this.y + 30)
   }
 
