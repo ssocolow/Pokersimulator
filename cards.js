@@ -1,6 +1,7 @@
 class Card {
-  constructor(name, x, y){
-    this.type = name
+  constructor(name, s, x, y){
+    this.number = name
+    this.suit = s
     this.x = x
     this.y = y
   }
@@ -11,7 +12,7 @@ class Card {
     rect(this.x, this.y, 40, 60)
     fill(0)
     textSize(24)
-    text(this.type, this.x, this.y + 30)
+    text(this.number + this.suit, this.x, this.y + 30)
   }
 
 
