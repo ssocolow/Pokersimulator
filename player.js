@@ -5,6 +5,7 @@ class Player {
     this.position = x
   }
   show(){
+    //add all the values for all positions
     if(this.position === 1){
       //show hand
       this.hand[0].x = width/2 - 20
