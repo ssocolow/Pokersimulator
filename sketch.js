@@ -2,7 +2,8 @@ let cards = []
 let shufflingcards = []
 let playerscards
 let number_of_cards = 51
-let p1;
+let players = [];
+let board;
 
 
 
@@ -23,7 +24,8 @@ function setup(){
   ellipseMode(CENTER)
   shuffleDeck()
 
-  p1 = new Player(1)
+  players.push(new Player(1))
+  board = new Board()
 
 
   // playerscards = pickCards(2)
@@ -55,7 +57,11 @@ function draw(){
 
   drawplayermats(8)
   //draw the player stuff
-  p1.show()
+  for (p of players){
+    p.show()
+  }
+
+  board.show()
 
 
   // for(a of playerscards){
@@ -139,5 +145,6 @@ function drawplayermats(x){
 
 function mousePressed(){
   print(mouseX, mouseY)
+  flop()
 
 }
